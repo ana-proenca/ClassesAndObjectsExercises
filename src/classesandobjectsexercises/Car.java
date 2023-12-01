@@ -20,12 +20,7 @@ public class Car {
         numWheels = 4;
         colour = "yellow";
     }
-    
-//    public Car(String make, String model, String colour) {
-//        
-//    }
-    
-            
+          
     public Car(String make, String model, int numWheels, String colour) {
         this.make = make;
         this.model = model;
@@ -33,13 +28,14 @@ public class Car {
         this.colour = colour;
     }
     
-    
-    
-    public void drive(double direction) {
-        System.out.println(String.format("The %s %s is diving at %f degrees", colour, make, direction));
-    }
-    
     public void drive(String diretion) {
         System.out.println("The " + colour + " " + make + " is driving " +  diretion);
     }
+    
+        
+    public void drive(double direction) {
+        System.out.println(String.format("The %s %s is diving at %.0f degrees", colour, make, direction));
+        System.out.printf("The %s %s is diving at %.0f degrees", colour, make, direction);
+    }
+     
 }
